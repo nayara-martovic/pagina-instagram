@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device=width, initial-scale=1.0"/>
+    <title>Instagram</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main id="page-wrapper">
+        <div class="phone-box">
+            <div class="phone">
+                <img src="./img/phone-screen.jpg" alt="Celular" class="phone-view show">
+                <img src="./img/phone-screen2.jpg" alt="Celular" class="phone-view">
+                <img src="./img/phone-screen3.jpg" alt="Celular" class="phone-view">
+                <img src="./img/phone-screen4.jpg" alt="Celular" class="phone-view">
+                <img src="./img/phone-screen5.jpg" alt="Celular" class="phone-view">
+            </div>
+        </div>
+        <div class="continue-box">
+            <div class="card card-white">
+                <img src="./img/logo.png" class="logo" alt="Instagram Logo" />
+                <div class="profile-photo">
+                    <img src="./img/perfil-photo.jpg" class="profile" alt="Foto de Perfil" />
+                </div>
+                <a href="#" class="btn-login">Continuar como NaninhaPark</a>
+                <a href="#" class="btn-logout">Remover Conta</a>
+            </div>
+            <div class="card card-white">
+                <p class="card-text">Não é NaninhaPark?</p>
+                <p class="card-text">
+                    <span class="text-blue">Alternar contas</span>
+                     ou 
+                    <span class="text-blue">Inscreva-se</span>
+                </p>
+            </div>
+            <div class="card">
+                <p class="card-text">Baixe o aplicativo</p>
+                <div class="btn-group">
+                    <a href="#" class="btn-download apple" title="Baixe na Apple Store"></a>
+                    <a href="#" class="btn-download android" title="Baixe na Google Play"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        window.onload = function(){
+            var elementos = document.querySelectorAll(".phone .phone-view");
+            var cont = 0;
+
+            setInterval(() => {
+                // Remover as classes de todos os elementos
+                elementos.forEach((el) => el.classList = "phone-view");
+
+                // Add classe ao elemento atual
+                elementos[cont].classList = "phone-view show";
+                cont++;
+
+                // Zerar contador caso tenha chegado ao final da lista
+                if (cont >= elementos.length)
+                    cont = 0;
+            }, 2500);
+        };
+    </script>
+</body>
+</html>

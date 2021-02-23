@@ -1,0 +1,232 @@
+/* RESET CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+/* CORPO */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    display: flex;
+    justify-content: center;
+}
+
+#page-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 100vh;
+}
+
+.phone-box {
+    width: 50%;
+}
+
+.continue-box {
+    width: 48%;
+    min-height: 34rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* PHONE */
+
+.phone-box .phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./img/phones.png') no-repeat center;
+    background-size: contain;
+    width: 100%;
+    height: 100vh;
+}
+
+.phone-box .phone-view {
+    display: none;
+    position: relative;
+    top: 0.39rem;
+    right: -2.95rem;
+    width: 54%;
+    height: auto;
+}
+
+.phone-box .phone-view.show {
+    display: block;
+}
+
+/* CARD */
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0;
+    margin: 0.6rem 0;
+}
+
+.card:nth-child(1) {
+    min-height: 19rem;
+}
+
+.card.card-white {
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.card-text {
+    color: rgb(160, 160, 160);
+    margin: 0.4rem 0;
+}
+
+.text-blue {
+    color: #0095F6;
+}
+
+/* PROFILE */
+
+.logo {
+    height: 3rem;
+    width: auto;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo .profile {
+    height: 7rem;
+    width: auto;
+}
+
+/* BOTOES */
+
+.btn-login {
+    background-color: #0095F6;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.btn-logout {
+    color: #0095F6;
+    margin-top: 1rem;
+}
+
+.btn-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.btn-download {
+    width: 10rem;
+    height: 3rem;
+    background-size: cover;
+}
+
+.btn-download.apple {
+    background-image: url('./img/apple-button.png');
+}
+
+.btn-download.android {
+    background-image: url('./img/android-button.png');
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    #page-wrapper {
+        width: 70%;
+    }
+
+    .phone-box .phone-view {
+        right: -2.47rem;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    #page-wrapper {
+        width: 90%;
+    }
+
+    .phone-box .phone-view {
+        right: -2.4rem;
+    }
+}
+
+/* Celular */
+
+@media (max-width: 425px) {
+    body {
+        background-color: white;
+    }
+
+    #page-wrapper {
+        width: 90%;
+        flex-direction: column;
+        padding-top: 3rem;
+    }
+
+    .phone-box, .continue-box {
+        width: 100%;
+    }
+
+    .continue-box {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .phone-box .phone-view {
+        right: -2.65rem;
+    }
+
+    .card.card-white {
+        border-color: transparent;
+    }
+}
+
+@media (max-width: 375px) {
+    .phone-box .phone-view {
+        right: -2.3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    #page-wrapper {
+        padding-top: 5rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-download {
+        margin: 0.3rem 0;
+    }
+
+    .phone-box .phone-view {
+        top: 0.2rem;
+        right: -2rem;
+    }
+}
